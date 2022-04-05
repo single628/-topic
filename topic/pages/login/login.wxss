@@ -1,0 +1,32 @@
+.logo{
+  margin: 100px auto 0px;
+  width:100px;
+  height:100px;
+}
+.img{
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  width:100%;
+  height:100%;
+}
+.button {
+    width: 80%;
+    height: 88rpx;
+    display: flex;
+    background: #1BC7B0;
+    color: #fff;
+    font-size: 30rpx;
+    border: none;
+    border-radius: 44rpx;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    margin: 254rpx auto 74rpx;
+  }
+   .button-img {
+      width: 56rpx;
+      height: 40rpx;
+      margin-right: 6rpx;
+    }
+    /* 不能使用本地资源图片 */

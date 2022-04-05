@@ -1,0 +1,14 @@
+<scroll-view class="single-topic" scroll-y="true" style="height:800rpx">
+    <text class="topic_title">(单选题)</text>
+    <text class="topic_title_content">{{singleTopic.topic_title_content}}</text>
+    <block wx:for="{{singleTopic.topic_answer_content}}" wx:for-item="answerContent" wx:for-index="idx" wx:key="idx">
+        <view 
+        class="answer"
+        bindtap="selectAnswer"  
+        id="{{idx}}" 
+        style="background-color: {{(currentId===(idx+'')||correctId===(idx+''))?((idx+'')===currentId?bgColor1:(correctId===idx+''?bgColor2:'white')):'white'}};">
+            <view class="{{currentId===(idx+'')||correctId===(idx+'')?'answer-active-index':'answer-index'}} answer-index" >{{answerIndex[idx]}}</view>
+            <view class="topic_list" >{{answerContent.answer_name}}</view>
+        </view>
+    </block>
+</scroll-view>

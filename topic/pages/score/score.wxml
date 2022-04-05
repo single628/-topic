@@ -1,0 +1,20 @@
+<view class="score">
+    <view class="title">作业结果</view> 
+    <view class="score-main">
+       <view class='topic-title'>教师观</view>
+       <view class="finsh-time">上次作答时间{{finishTime}}</view>
+       <view class="score">
+            <canvas style="width:170px;height:150px" canvas-id="mycanvas"></canvas>
+       </view>
+       <view class="correct-num">
+             <text class="iconfont icon-tm icon"></text>   共{{topicLen}}道题，答对{{correctNum}}题，答错{{errorNum}}题
+       </view>
+       <view class="use-time">
+                <text class="iconfont icon-yongshi icon" style="font-size:16px"></text> 
+                用时：{{useTime}}s，题均：{{averageTime}}s
+       </view>
+       <view class="view-resolved" bindtap="viewParse">查看解析</view>
+       <view class="redoing" bindtap="redoing">再做一次</view>
+       <view class="redoing" bindtap="backTaskList">返回任务列表</view>
+    </view>
+</view>

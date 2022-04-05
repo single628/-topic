@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"index.js","sourcesContent":["var fs = require('fs')\n  , lstat = fs.lstatSync;\n\nexports.readlinkSync = function (p) {\n  if (lstat(p).isSymbolicLink()) {\n    return fs.readlinkSync(p);\n  } else {\n    return p;\n  }\n};\n\n\n"]}

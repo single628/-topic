@@ -1,0 +1,93 @@
+/* home.wxss */
+@import '../../icon.wxss' ;
+.head{
+    display:flex;
+    flex-direction:row;
+    background-color: #1BC7B0;
+    color:white;
+    font-size:40rpx;
+}
+.head .back{
+    height:40px;
+    line-height:40px;
+}
+.head .title{
+    width:120px;
+    height:40px;
+    line-height:40px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    margin:0 auto;
+}
+.main .topbar{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    color:silver;
+}
+.main .tip{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    width:300px;
+    height:100px;
+    /* line-height:80px; */
+    border:1px solid #1BC7B0;
+    border-radius:4px;
+    text-align:center;
+    font-size:12px;
+    color:#4e4e4e;
+    margin:10px auto;
+}
+.tip .tip-text{
+    margin-top:30px;
+    margin-right:20px;
+    text-align:center;
+    line-height:20px;
+}
+.tip .flush{
+    position:absolute;
+    right:15px;
+    bottom:10px;
+    font-size:13px;
+    color:#1BC7B0;
+}
+
+.footbar{
+    position:fixed;
+    bottom:5px;
+    display:flex;
+    flex-direction:row;
+    z-index:100;
+}
+.footbar .evaluate,.footbar .report{
+    width:130px;
+    height:40px;
+    line-height:40px;
+    color:#1BC7B0;
+    font-size:16px;
+    border:1px solid #1BC7B0;
+    text-align:center;
+    border-radius:100px;
+}
+.footbar .evaluate{
+    margin:0 35px 0 10px;
+}
+.footbar .report{
+    color:white;
+    background-color:#1BC7B0;
+}
+
+.line{
+    width:50px;
+    /* height:2px; */
+    border:2px solid #1BC7B0;
+    margin:0 auto;
+}
+.activities{
+    color:#1BC7B0;
+}

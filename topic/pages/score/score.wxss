@@ -1,0 +1,65 @@
+@import '../../icon.wxss';
+
+.score .title{
+    color:white;
+    font-size:18px;
+    text-align:center;
+    line-height:30px;
+    width:100%;
+    padding-top:5px;
+    background-color:#1BC7B0;
+}
+.score .score-main{
+    background-color:rgb(238, 237, 237);
+    width:300px;
+    height:450px;
+    margin:20px auto;
+    border:1px solid rgb(238, 237, 237);
+    border-radius:10px;
+    text-align:center;
+    font-size:14px;
+}
+.score-main .topic-title{
+    padding:10px 0px;
+    height:20px;
+}
+.score-main .finsh-time{
+    height:20px;
+    padding-bottom:10px;
+    font-size:12px;
+    color:silver;
+}
+.score-main .score{
+    height:150px;
+    width:200px;
+    margin:0 auto;
+}
+.correct-num,.use-time{
+    font-size:12.5px;
+    width:200px;
+    margin:10px auto;
+    height:30px;
+    line-height:30px;
+    text-align: start;
+}
+.view-resolved,.redoing{
+    font-size:14px;
+    width:199px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid #1BC7B0;
+    border-radius:30px;
+    margin:10px auto;
+}
+.view-resolved{
+    color:white;
+    background-color:#1BC7B0;
+}
+.redoing{
+    color:#1BC7B0;
+}
+.icon{
+    margin-right:5px;
+    color:#1BC7B0;
+}

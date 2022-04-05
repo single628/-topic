@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/home/home",
+        "pages/topic/topic",
+        "pages/answerCard/answerCard",
+        "pages/score/score",
+        "pages/parse/parse"
+    ],
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

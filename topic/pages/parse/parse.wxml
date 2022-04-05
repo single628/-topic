@@ -1,0 +1,32 @@
+<view class="parse" bindtouchstart="touchStart" bindtouchmove="touchMove">
+
+    <view class="head-title">
+        <view class="iconfont icon-fanhui back" bindtap="backTaskList"></view>
+        <view>{{currentTopicNum}}/{{topicLen}}</view>
+    </view>
+    <scroll-view class="main" scroll-y="true" style="height:1000rpx">
+        <single-topic singleTopic="{{singleTopic}}" singleNum="{{currentTopicNum-1+''}}" currentId="{{currentId}}" correctId="{{correctId}}" flag="{{flag}}"></single-topic>
+        <view class='answer'>
+            <text>我的答案是：{{answerPro[counter]==answerPro[counter]?answerPro[counter][counter]:" "}}</text>
+            <text> 正确答案是：{{correctAnswerPro[counter][counter]}}</text>
+        </view>
+        <view class="analysis">
+            <view class="analysis-title">解析</view>
+            <view class="analysis-content">{{analysis[counter]}}</view>
+        </view>
+    </scroll-view>
+    <view class="foot-bar">
+        <view class="only-error bar" style="color:{{onlyflag?'#1BC7B0':'sliver'}}" bindtap="onlyError">
+            <view class="iconfont icon-cuoti icon"></view>
+            <view class="icon-text">只看错题</view>
+        </view>
+        <view class="answerCard bar" bindtap="backTaskList">
+            <view class="iconfont icon-datika icon"></view>
+            <view class="icon-text">返回任务列表</view>
+        </view>
+        <!-- <view class="errorRecovery bar"  style="color:{{errorflag?'#1BC7B0':'sliver'}}" bindtap="errorRecovery">
+            <view class="iconfont icon-jiucuo icon"></view>
+            <view class="icon-text">纠错</view>
+        </view> -->
+    </view>
+</view>

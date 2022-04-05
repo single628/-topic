@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;AAAA;AACA;AACA;AACA;AACA","file":"index.js","sourcesContent":["module.exports = isPromise;\r\n\r\nfunction isPromise(obj) {\r\n  return obj && typeof obj.then === 'function';\r\n}"]}

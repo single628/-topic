@@ -1,0 +1,45 @@
+<view class="rankk">
+    <scroll-view  scroll-y='true' style="height:900rpx">
+        <view class="rank">
+            <view class="paiming">
+                <text class="th">排名</text>
+                <view class="tr" wx:if="{{sortFlag1||sortFlag2||sortFlag3}}">
+                    <view class="td" wx:for="{{rankAesc}}" wx:key="index">{{item+1}}</view>
+                </view>
+                <view class="tr" wx:else>
+                    <view class="td" wx:for="{{rankDesc}}" wx:key="index">{{item+1}}</view>
+                </view>
+            </view>
+            <view class="name">
+                <text class="th">昵称</text>
+                <view class="tr">
+                    <view class="td" wx:for="{{rankList}}" wx:key="index">{{item.name}}</view>
+                </view>
+            </view>
+            <view class="tiliang" bindtap="totalTopicNumSort" data-bol="{{sortFlag1}}">
+                <text class="th">题量</text><text class="iconfont icon-{{sortFlag1?'xiangxia1':'xiangshang'}} icon"></text>
+                <view class="tr">
+                    <view class="td" wx:for="{{rankList}}" wx:key="index">{{item.total_topic_num}}</view>
+                </view>
+            </view>
+            <view class="speed" bindtap="speedSort" data-bol="{{sortFlag2}}">
+                <text class="th">速度</text><text class="iconfont icon-{{sortFlag2?'xiangshang':'xiangxia1'}} icon"></text>
+                <view class="tr">
+                    <view class="td" wx:for="{{rankList}}" wx:key="index">{{item.speed}}</view>
+                </view>
+            </view>
+            <view class="zhengquelv" bindtap="correctRatSort" data-bol="{{sortFlag3}}">
+                <text class="th">正确率</text><text class="iconfont icon-{{sortFlag3?'xiangshang':'xiangxia1'}} icon"></text>
+                <view class="tr">
+                    <view class="td" wx:for="{{rankList}}" wx:key="index">{{item.correct_rat}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="foot">
+        <view class="myRank">我的排名:{{myRank}}</view>
+        <view class="myRank">{{myTotalTopic}}道</view>
+        <view class="myRank">{{mySpeed}}s</view>
+        <view class="myRank">{{myCorrectRat}}%</view>
+    </view>
+</view>

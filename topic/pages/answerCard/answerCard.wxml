@@ -1,0 +1,8 @@
+<view class="emit">
+    <view class="title">答题卡</view>
+    <view class="lists">
+        <view  class="{{answer[index]?'active-list':'list'}}" wx:for="{{answer}}" wx:key="index" bindtap="jump" id="{{index}}">{{index+1}}</view>
+    </view>
+    <view class="emitBtn" bindtap="jumpToScore">提交</view>
+</view>
+<!--  -->

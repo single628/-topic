@@ -1,0 +1,9 @@
+<view class="login">
+    <view class="logo">
+        <image src="../../images/logo.PNG" class="img"></image>
+    </view>
+    <button open-type="getUserInfo" class="button" bindtap="getUserProfile">
+  <image class="button-img" src="../../images/wx_logo.png"></image>
+  <text>微信一键授权登录</text>
+</button> 
+</view>

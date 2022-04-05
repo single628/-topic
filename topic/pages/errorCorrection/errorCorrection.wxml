@@ -1,0 +1,7 @@
+<view class="jiucuo">
+    <textarea class="areas"  placeholder="请描述您想纠错的地方，或直接提出疑问。"placeholder-class="place" maxlength="{{orderNoteMax}}" bindinput="inputs">
+      <text class="number">{{currentWordNumber|0}}/{{orderNoteMax}}</text>
+      <text class="hint">{{texts}}</text>
+  </textarea>
+    <view class="{{emitflag?'active-emit':'emit'}}">提交</view>
+</view>

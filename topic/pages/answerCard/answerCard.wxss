@@ -1,0 +1,55 @@
+.emit .title{
+    color:white;
+    font-size:18px;
+    text-align:center;
+    line-height:30px;
+    width:100%;
+    padding-top:5px;
+    background-color:#1BC7B0;
+}
+.emit .lists{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    /* justify-content: center; */
+    width:300px;
+    margin:15px auto;
+    flex-wrap: wrap;
+}
+.lists .list{
+    margin-right:10px;
+    margin-bottom:10px;
+    color:#1BC7B0;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid #1BC7B0;
+    border-radius: 100%;
+}
+.emit .emitBtn{
+    width: 130px;
+    line-height: 40px;
+    border: 1px solid #1BC7B0;
+    border-radius: 30px;
+    color: #1BC7B0;
+    text-align:center;
+    color:17px;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    font-weight: bold;
+}
+.active-list{
+    margin-right:10px;
+    margin-bottom:10px;
+    color:white;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid white;
+    border-radius: 100%;
+    background-color:#1BC7B0;
+}

@@ -1,0 +1,33 @@
+<!-- 首页 -->
+<!--home.wxml-->
+<view class='home'>
+    <view class="head">
+        <!-- <view class="iconfont icon-fanhui back" bindtap="back"></view> -->
+        <view class="title">22上全程初中2班</view>
+    </view>
+    <view class="main">
+        <view class="topbar">
+            <view class="{{showflag1?'activities':''}}" bindtap="click1">
+                活动情况 <view class="line" wx:if="{{showflag1}}"></view>
+
+            </view>
+            <view class="current-rank {{showflag2?'activities':''}}" bindtap="click2">
+                当前排名<view class="line" wx:if="{{showflag2}}"></view>
+            </view>
+        </view>
+        <rank wx:if="{{showflag2}}" ></rank>
+        <scroll-view scroll-y="true" style="height:800rpx" wx:if="{{showflag1}}">
+            <view class="tip">
+                <image src="../../images/人物.PNG" style="width:100px;height:100px"></image>
+                <view class="tip-text">{{username}}同学，以下是今天的任务内容，请按照列表完成今日必修任务，加油!</view>
+                <view class="iconfont flush icon-update"></view>
+            </view>
+            <calendar-halfScreenDialog duigou="{{duigou}}" bind:change="change"></calendar-halfScreenDialog>
+
+            <view class="footbar">
+                <view class="evaluate">评价班主任</view>
+                <view class="report">学习报告</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

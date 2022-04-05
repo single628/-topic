@@ -1,0 +1,46 @@
+.single-topic .topic_title{
+    font-size:14px;
+    margin-right: 8px;
+    color:#1BC7B0;
+}
+.single-topic .topic_title_content{
+    font-size:15px;
+    color:black;
+    line-height: 1.6;
+}
+.single-topic .answer{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    height:50px;
+    width:300px;
+    margin-bottom:8px;
+}
+.answer-index{
+    width:35px;
+    height:35px;
+    line-height:35px;
+    text-align:center;
+    border:2px solid #1BC7B0;
+    border-radius:100%;
+    color:#1BC7B0;
+    font-size:14px;
+    margin-right:15px;
+}
+
+.answer-active-index{
+    width:35px;
+    height:35px;
+    line-height:35px;
+    text-align:center;
+    border:2px solid white;
+    border-radius:100%;
+    color:white;
+    font-size:14px;
+    margin-right:15px;
+}
+.answer .topic_list{
+    font-size:14px;
+    color:black;
+    width:250px;
+}

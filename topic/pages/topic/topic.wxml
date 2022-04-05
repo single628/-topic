@@ -1,0 +1,24 @@
+<!--topic.wxml-->
+<!--题目页面 -->
+<!-- 注意：遇到的问题1，只完成了wxmlhe wxss文件的编写，不将JS里面的文件进行Pages()初始化是不会出现内容的 -->
+<view class="topic">
+  <view class="topic-head">
+    <view class="head-left">
+        <text class="time">{{h}}:{{m}}:{{s}}</text>
+    </view>
+    <view class="head-title">{{currentTopicNum}}/20</view>
+    <view class="head-right">
+      <view class="li answerCard" bindtap="jumpToCard"><text class="iconfont icon-datika"></text><text class="icon-text">答题卡</text></view>
+    </view>
+  </view>
+  <view class="task">
+
+    <!-- 这里必须用事件委托。-->
+    <single-topic singleTopic="{{singleTopic}}" singleNum="{{currentTopicNum-1+''}}" currentId="{{currentId}}" bind:getCurrentId="getCurrentId"></single-topic>
+    <view class="next-button">
+      <button  alt="上一题" class="back" style="display:{{backshow}}" bindtap="backTopic">上一题</button>
+      <button  alt="下一题" class="next" bindtap="nextTopic" style="display:{{nextshow}}">下一题</button>
+      <button  alt="提交" class="emit" style="display:{{emitshow}}" bindtap="emitFunc">提交</button>
+    </view>
+</view>
+</view>

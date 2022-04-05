@@ -1,0 +1,61 @@
+<!--components/calendar/calendar.wxml-->
+<view class="calendar">
+	<view class="title flex">
+		<view class="flex">
+			<!--picker 从底部弹起的滚动选择器。 -->
+			<!-- mode选择是日期选择器、时间选择器、省市区选择器，fields是日期选择器的属性名，bindchange是日期选择器的属性名，当value值改变时触发change事件 -->
+			<view class="everyday-task" style="font-size:21px">展开任务</view>
+			<view class="question" bindtap="question">
+				<view class="iconfont icon-yiwen" style="font-size:20px;line-height:20px; color:silver;"></view>
+			</view>
+		</view>
+		<view catchtap="openChange" class="flex open">
+			<view>{{open?"收起":"展开"}}</view>
+			<view style="margin-left:6rpx;font-size:30rpx" class="iconfont icon-{{open?'xiangshang':'xiangxia1'}}"></view>
+		</view>
+	</view>
+
+	<!-- 日历头部 -->
+	<view class="flex-around calendar-week">
+		<view class="view">日</view>
+		<view class="view">一</view>
+		<view class="view">二</view>
+		<view class="view">三</view>
+		<view class="view">四</view>
+		<view class="view">五</view>
+		<view class="view">六</view>
+	</view>
+
+	<!-- 日历主体 -->
+	<view class="flex-start flex-wrap calendar-main" style="height:{{dateList.length/7*72}}rpx">
+		<view wx:for="{{dateList}}" wx:key="dateList" class="day">
+			<view class="bg {{(item.year === selectDay.year && item.month === selectDay.month) ? (item.day === selectDay.day?'select':''): 'other-month'}}" catchtap="selectChange" data-day="{{item.day}}" data-year="{{item.year}}" data-month="{{item.month}}" data-date-string="{{item.dateString}}">
+				{{item.day}}
+			</view>
+			<view class="spot" wx:if="{{item.spot}}"></view>
+			<view class="duigou iconfont icon-duigou" wx:if="{{item.duigou}}"></view>
+			<view class="suo iconfont icon-suoding" wx:if="{{item.suo}}"></view>
+
+		</view>
+	</view>
+	<view class="task-title" wx:if="{{kk}}">今天没有任务~</view>
+	<view class="task-title" wx:elif="{{suo}}">任务未开启</view>
+	<view class="{{(ff)?'finished':'task-title'}} task-title " wx:elif="{{rr}}" bind:tap="{{(ff)?'jumpToScore':'titleView'}}">
+		<view class="iconfont icon-yuanjiaojuxing rec"></view>
+		<view class="title-text">
+			认知基础（2）、学习理论（1）
+			<view class="task-num">20道题</view>
+		</view>
+		<view class="bixiu">必修</view>
+		<view class="iconfont icon-qianjin forward"></view>
+	</view>
+	<view class="task-title finished " wx:elif="{{ff}}" bind:tap="jumpToScore">
+		<view class="iconfont icon-yuanjiaojuxing rec"></view>
+		<view class="title-text">
+			认知基础（2）、学习理论（1）
+			<view class="task-num">20道题</view>
+		</view>
+		<view class="bixiu">必修</view>
+		<view class="iconfont icon-qianjin forward"></view>
+	</view>
+</view>
